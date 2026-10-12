@@ -1,0 +1,15 @@
+{
+  "p": 2,
+  "K": 48,
+  "degree": 48,
+  "nonzero_certified": true,
+  "normalization": "primitive integer polynomial, positive gcd removed",
+  "precision_bits": 155413,
+  "terms": 155605,
+  "tail_bound": "[4.08867853285011742898761e-46832 +/- 3.94e-46856]",
+  "value": "[2.317064563378004086582759755149740703557e-8478 +/- 2.60e-8518]",
+  "logabs": -19520.476117293383,
+  "coefficient_sha256": "70e99ec853a64fe7aff0684c3b671e3a1d4f58247a9e6d9960dbd9454b4baed5",
+  "v2content": 96294,
+  "denominator_bits": 103973
+}

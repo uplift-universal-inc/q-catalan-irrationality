@@ -1,0 +1,263 @@
+{
+  "status": "passed",
+  "entry_checks": 128,
+  "cases": [
+    {
+      "p": 2,
+      "A": 2,
+      "B": 0,
+      "K": 1,
+      "entry_count": 1,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": 0,
+      "K": 2,
+      "entry_count": 3,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": 0,
+      "K": 3,
+      "entry_count": 5,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": 0,
+      "K": 4,
+      "entry_count": 7,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": -2,
+      "K": 1,
+      "entry_count": 1,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": -2,
+      "K": 2,
+      "entry_count": 3,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": -2,
+      "K": 3,
+      "entry_count": 5,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": -2,
+      "K": 4,
+      "entry_count": 7,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": 3,
+      "K": 1,
+      "entry_count": 1,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": 3,
+      "K": 2,
+      "entry_count": 3,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": 3,
+      "K": 3,
+      "entry_count": 5,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": 2,
+      "B": 3,
+      "K": 4,
+      "entry_count": 7,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": -2,
+      "B": 1,
+      "K": 1,
+      "entry_count": 1,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": -2,
+      "B": 1,
+      "K": 2,
+      "entry_count": 3,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": -2,
+      "B": 1,
+      "K": 3,
+      "entry_count": 5,
+      "passed": true
+    },
+    {
+      "p": 2,
+      "A": -2,
+      "B": 1,
+      "K": 4,
+      "entry_count": 7,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": 0,
+      "K": 1,
+      "entry_count": 1,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": 0,
+      "K": 2,
+      "entry_count": 3,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": 0,
+      "K": 3,
+      "entry_count": 5,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": 0,
+      "K": 4,
+      "entry_count": 7,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": -2,
+      "K": 1,
+      "entry_count": 1,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": -2,
+      "K": 2,
+      "entry_count": 3,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": -2,
+      "K": 3,
+      "entry_count": 5,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": -2,
+      "K": 4,
+      "entry_count": 7,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": 3,
+      "K": 1,
+      "entry_count": 1,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": 3,
+      "K": 2,
+      "entry_count": 3,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": 3,
+      "K": 3,
+      "entry_count": 5,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": 2,
+      "B": 3,
+      "K": 4,
+      "entry_count": 7,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": -2,
+      "B": 1,
+      "K": 1,
+      "entry_count": 1,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": -2,
+      "B": 1,
+      "K": 2,
+      "entry_count": 3,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": -2,
+      "B": 1,
+      "K": 3,
+      "entry_count": 5,
+      "passed": true
+    },
+    {
+      "p": 3,
+      "A": -2,
+      "B": 1,
+      "K": 4,
+      "entry_count": 7,
+      "passed": true
+    }
+  ],
+  "scope": "independent direct evaluation of renormalized functional and mixed positive/negative series target; finite consistency checks only"
+}

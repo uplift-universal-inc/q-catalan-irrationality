@@ -1,0 +1,34 @@
+{
+  "date_utc": "2026-10-12",
+  "status": "written proof candidate with internal reviews",
+  "formal_proof_complete": false,
+  "external_peer_review_claimed": false,
+  "novelty_certified": false,
+  "python": "3.12.14",
+  "python_flint": "0.9.0",
+  "finite_checks": {
+    "normalization_cases": 100,
+    "independent_content_cases": 40,
+    "direct_functional_entries": 144,
+    "exact_determinant_evaluations": 36,
+    "primitive_enclosures": 12,
+    "large_enclosure": {
+      "p": 2,
+      "K": 48,
+      "nonzero_certified": true
+    }
+  },
+  "pdf": {
+    "pages": 14,
+    "all_pages_visually_reviewed": true,
+    "latex_warnings": 0,
+    "sha256": "b1ce95052ecc233802e43e0392200ac9b87158af9fd929295f472740e4b138f8"
+  },
+  "reviewed_tex_sha256": {
+    "main.tex": "4279524cb026db176763d07f460e413fbf73853bcc8de901eeeb47c0426b1b8d",
+    "introduction.tex": "baa0153743698d2b412c66dfc8e73b77eb27ca2d8bb29300e7b14e8d28592eaa",
+    "references.tex": "2d3f40e283f182a69ad6f3a7de0b3b27eca32f7a7686f243b941cb4c272ec53a"
+  },
+  "source_git_blobs_verified": 29,
+  "publication": "Prepared locally; target repository permissions were pull=true,push=false for connected user fikreab-s."
+}

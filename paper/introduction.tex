@@ -1,0 +1,50 @@
+\begin{abstract}
+We give a determinantal proof that $\beta_{1/p}(2)=\sum_{n\ge1}np^n/(p^{2n}+1)$ is irrational for every integer $p\ge2$. This is the Lambert-series $q$-analogue of Catalan's constant in the normalization of Jouhet and Mosaki. A signed Euler-derivative functional on an odd geometric lattice produces Hankel determinants that are polynomials in the single target value. Double zeros at early lattice points give cubic real decay. A local translation extracts common coefficient content at every prime dividing $p$, including composite bases, and root-of-unity cluster bases control the remaining denominators. At cyclotomic orders divisible by four, a double zero in a residue interpolant bounds the singular rank. The resulting integer polynomials have degree $K$ and nonzero values of size at most $\exp((-\delta+o(1))K^3\log p)$ infinitely often, where $\delta=1-1309/(150\pi^2)>0$. Rational interpolation proves the required nonvanishing without positivity. The general determinantal approach has earlier precedents; the contribution is the set of explicit arithmetic and analytic estimates for this signed functional.
+\end{abstract}
+\begin{center}\small
+Research draft, 12 October 2026. Written proof with internal mathematical reviews.\\
+No complete Lean formalization or external peer review is claimed.
+\end{center}
+\tableofcontents
+\clearpage
+\section{Introduction}
+For $0<q<1$, define
+\begin{equation}\label{eq:beta}
+ \beta_q(2)=\sum_{n=1}^{\infty}\frac{nq^n}{1+q^{2n}}.
+\end{equation}
+This is the normalization used by Jouhet and Mosaki~\cite[equation (1.1)]{JM}. The phrase $q$-Catalan value in this paper always means~\eqref{eq:beta}; it does not refer to the combinatorial $q$-Catalan numbers. The series converges absolutely.
+
+\begin{theorem}[Main theorem]\label{thm:main}
+For every integer $p\ge2$, the real number
+\begin{equation*}
+ \xi_p=\beta_{1/p}(2)=\sum_{n=1}^{\infty}\frac{np^n}{p^{2n}+1}
+\end{equation*}
+is irrational.
+\end{theorem}
+The assumption concerns any integer base, not just prime bases. The proof constructs integer polynomials of increasing degree whose nonzero values at $\xi_p$ tend to zero faster than the denominator cost of any fixed rational number.
+
+\subsection{Earlier work and the target}
+Jouhet and Mosaki proved lower bounds for the dimension spanned over $\Q$ by $1$ and finitely many even values of their $q$-beta function. Their consequences include infinitely many irrational even values and, for reciprocal integer parameters in their stated range, irrationality of at least one of $\beta_q(2),\beta_q(4),\ldots,\beta_q(20)$~\cite[Theorem 1.1 and Corollaries 1.2--1.3]{JM}. Those collective conclusions do not isolate weight two. They also explain the modular origin of transcendence at odd weights, including weight one~\cite[Introduction]{JM}. The theorem here concerns the individual even value in~\eqref{eq:beta}.
+
+The name reflects the limit
+\begin{equation}\label{eq:classicallimit}
+ \lim_{q\uparrow1}(1-q)^2\beta_q(2)=G,
+ \qquad G=\sum_{m=0}^{\infty}\frac{(-1)^m}{(2m+1)^2},
+\end{equation}
+as established in~\cite[Section 6.1]{JM}. Classical $G$ and the fixed-parameter values are distinct arithmetic targets. OpenAI's September 2026 preprint reports an irrationality proof for $G$~\cite{OAICatalan}; Litsey's October 2026 preprint reports a quantitative irrationality measure~\cite{Litsey}. These are cited as recent research reports, not as results independently verified in this paper. Neither is used below. In particular, a limiting identity such as~\eqref{eq:classicallimit} does not transfer irrationality to fixed $q$, and the positive reciprocal integers do not themselves approach $q=1$.
+
+\subsection{The determinantal background}
+The use of growing-degree polynomials obtained from determinants has substantial precedents. Zudilin develops a determinantal irrationality criterion~\cite{Zudilin2017}; his earlier work on the generalized $q$-logarithm obtains cubic exponential decay of Hankel polynomials~\cite[Section 4, equation (8)]{Zudilin2016}. Neither the use of determinants nor cubic decay is claimed as a new general principle here.
+
+The moving denominator belongs to the theory of rational modifications of moment problems. Uvarov studied the relation between orthogonal systems for different distribution functions~\cite{Uvarov}, and Krattenthaler gave a determinant identity encompassing the corresponding rational modifications~\cite{Krattenthaler2021}. Pr\'evost's work on remainder Pad\'e approximants for Hurwitz zeta supplies another relevant approximation-theoretic precedent~\cite{Prevost2019}. The historical discussion by Persiflage~\cite{Persiflage} motivated our comparison with these earlier constructions; it is credited as exposition rather than used as a mathematical authority.
+
+The present construction was developed in the same research program as the companion $q$-zeta(3) argument~\cite{CompanionZeta}. Its distinctive difficulty is the alternating character: it changes the local content calculation, prevents a direct positivity argument, and creates different root-of-unity collision cases. The proof below supplies these target-specific estimates directly. A literature search and these comparisons do not establish priority over all existing work.
+
+\subsection{How the estimates fit together}
+Simple-pole moments of a signed derivative functional contain only the target $\xi_p$ and rational tails. This produces degree-$K$ determinant polynomials. On the real side, a basis with double roots at early odd lattice points gives decay $p^{-K^3/3+O(K^2)}$. At primes dividing the base, every coefficient has at least $p^{5K^3/6+O(K^2)}$ of common content. The remaining cyclotomic cost is
+\begin{equation*}
+ p^{(C+o(1))K^3},\qquad C=\frac16+\frac{1309}{150\pi^2}<\frac76.
+\end{equation*}
+The sum $1/3+5/6=7/6$ therefore exceeds the cost. The part of the arithmetic argument responsible for a sufficient margin is the residue-rank estimate at orders divisible by four, including the singular polynomial quotient.
+
+A separate nonvanishing argument completes the proof. Consecutive singular determinants give rational interpolants that coincide as rational functions, even if their denominators vanish at interpolation points. Eventual singularity would force a fixed nonrational Cauchy transform to have such a stabilized approximant, which its infinitely many poles exclude. Thus sufficiently small nonzero integer-polynomial values occur infinitely often, as needed for the rationality contradiction.

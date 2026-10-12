@@ -1,0 +1,577 @@
+{
+  "status": "all passed",
+  "scope": "Independent finite exact consistency evidence for the all-index proof.",
+  "cases": 40,
+  "rows": [
+    {
+      "p": 2,
+      "K": 1,
+      "E_K": 0,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 0,
+          "proved_lower_bound": 0
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 2,
+      "E_K": 6,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 6,
+          "proved_lower_bound": 6
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 3,
+      "E_K": 22,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 24,
+          "proved_lower_bound": 22
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 4,
+      "E_K": 54,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 57,
+          "proved_lower_bound": 54
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 5,
+      "E_K": 106,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 112,
+          "proved_lower_bound": 106
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 6,
+      "E_K": 184,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 192,
+          "proved_lower_bound": 184
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 7,
+      "E_K": 292,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 304,
+          "proved_lower_bound": 292
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 8,
+      "E_K": 436,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 454,
+          "proved_lower_bound": 436
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 9,
+      "E_K": 620,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 645,
+          "proved_lower_bound": 620
+        }
+      ]
+    },
+    {
+      "p": 2,
+      "K": 10,
+      "E_K": 850,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 884,
+          "proved_lower_bound": 850
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 1,
+      "E_K": 0,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 0,
+          "proved_lower_bound": 0
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 2,
+      "E_K": 6,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 6,
+          "proved_lower_bound": 6
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 3,
+      "E_K": 22,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 23,
+          "proved_lower_bound": 22
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 4,
+      "E_K": 54,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 56,
+          "proved_lower_bound": 54
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 5,
+      "E_K": 106,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 110,
+          "proved_lower_bound": 106
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 6,
+      "E_K": 184,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 190,
+          "proved_lower_bound": 184
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 7,
+      "E_K": 292,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 302,
+          "proved_lower_bound": 292
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 8,
+      "E_K": 436,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 451,
+          "proved_lower_bound": 436
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 9,
+      "E_K": 620,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 642,
+          "proved_lower_bound": 620
+        }
+      ]
+    },
+    {
+      "p": 3,
+      "K": 10,
+      "E_K": 850,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 880,
+          "proved_lower_bound": 850
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 1,
+      "E_K": 0,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 0,
+          "proved_lower_bound": 0
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 2,
+      "E_K": 6,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 12,
+          "proved_lower_bound": 12
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 3,
+      "E_K": 22,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 47,
+          "proved_lower_bound": 44
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 4,
+      "E_K": 54,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 113,
+          "proved_lower_bound": 108
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 5,
+      "E_K": 106,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 222,
+          "proved_lower_bound": 212
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 6,
+      "E_K": 184,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 382,
+          "proved_lower_bound": 368
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 7,
+      "E_K": 292,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 606,
+          "proved_lower_bound": 584
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 8,
+      "E_K": 436,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 905,
+          "proved_lower_bound": 872
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 9,
+      "E_K": 620,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 1287,
+          "proved_lower_bound": 1240
+        }
+      ]
+    },
+    {
+      "p": 4,
+      "K": 10,
+      "E_K": 850,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 1764,
+          "proved_lower_bound": 1700
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 1,
+      "E_K": 0,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 0,
+          "proved_lower_bound": 0
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 0,
+          "proved_lower_bound": 0
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 2,
+      "E_K": 6,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 6,
+          "proved_lower_bound": 6
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 6,
+          "proved_lower_bound": 6
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 3,
+      "E_K": 22,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 24,
+          "proved_lower_bound": 22
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 23,
+          "proved_lower_bound": 22
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 4,
+      "E_K": 54,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 57,
+          "proved_lower_bound": 54
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 56,
+          "proved_lower_bound": 54
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 5,
+      "E_K": 106,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 112,
+          "proved_lower_bound": 106
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 110,
+          "proved_lower_bound": 106
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 6,
+      "E_K": 184,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 192,
+          "proved_lower_bound": 184
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 190,
+          "proved_lower_bound": 184
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 7,
+      "E_K": 292,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 304,
+          "proved_lower_bound": 292
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 302,
+          "proved_lower_bound": 292
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 8,
+      "E_K": 436,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 454,
+          "proved_lower_bound": 436
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 451,
+          "proved_lower_bound": 436
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 9,
+      "E_K": 620,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 645,
+          "proved_lower_bound": 620
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 642,
+          "proved_lower_bound": 620
+        }
+      ]
+    },
+    {
+      "p": 6,
+      "K": 10,
+      "E_K": 850,
+      "leading_coefficient_matches": true,
+      "local": [
+        {
+          "prime": 2,
+          "actual_min_coefficient_valuation": 884,
+          "proved_lower_bound": 850
+        },
+        {
+          "prime": 3,
+          "actual_min_coefficient_valuation": 880,
+          "proved_lower_bound": 850
+        }
+      ]
+    }
+  ]
+}

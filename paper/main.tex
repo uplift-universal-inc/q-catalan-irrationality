@@ -1,0 +1,454 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{microtype}
+\setlength{\emergencystretch}{1em}
+\usepackage{xcolor}
+\definecolor{paperlink}{RGB}{0,0,114}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linktoc=all,linkcolor=paperlink,citecolor=paperlink,urlcolor=paperlink,
+pdftitle={Irrationality of the q-Catalan value beta(1/p,2)},pdfauthor={Open Problems research project}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Irrationality of the $q$-Catalan value $\beta_{1/p}(2)$}
+\fancyhead[R]{\small\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{1.25em}\setlength{\parskip}{0pt}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{1}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Q}{\mathbb Q}\newcommand{\Z}{\mathbb Z}\newcommand{\C}{\mathbb C}
+\newcommand{\Lcal}{\mathcal L}\newcommand{\Fcal}{\mathcal F}
+\newcommand{\rank}{\operatorname{rank}}\newcommand{\ord}{\operatorname{ord}}
+\title{Irrationality of the $q$-Catalan value $\beta_{1/p}(2)$}
+\author{Open Problems research project}
+\date{}
+\begin{document}
+\maketitle
+\input{introduction}
+\section{The signed functional and determinant}
+Throughout the proof, $p\ge2$ is a fixed integer, $q=p^{-1}$, and $\xi_p=\beta_q(2)$. Write $\chi$ for the nontrivial character modulo $4$: $\chi(2m)=0$ and $\chi(2m+1)=(-1)^m$. The Euler derivative $\theta=x\,d/dx$ turns simple rational poles into the summands of the target. We use the functional
+\begin{equation}\label{eq:functional}
+ \Lcal(f)=\sum_{m\ge1}\chi(m)(\theta f)(q^m).
+\end{equation}
+It is defined for every $C^1$ function on $[0,q]$, since
+\begin{equation}\label{eq:continuity}
+ |\Lcal(f)|\le\frac{q}{1-q^2}\|f'\|_\infty.
+\end{equation}
+All rational functions used below are analytic near that interval. Put
+\begin{equation}\label{eq:tails}
+ g_2(y)=\frac{y}{(1-y)^2},\qquad
+ S_N=\sum_{b=1}^N\chi(b)g_2(q^b),\qquad
+ \mu_j=\frac{jp^j}{1+p^{2j}}\quad(j\ge1).
+\end{equation}
+Absolute convergence permits interchanging the geometric sums: indeed $\sum_{m,j\ge1}j q^{mj}<\infty$. Consequently
+\begin{align}\label{eq:moments}
+ \Lcal(1)&=0,&\Lcal(x^j)&=\mu_j\quad(j\ge1),\\
+ \Lcal((1-p^{-2a}x)^{-1})&=(-1)^a(\xi_p-S_{2a})\quad(a\ge1).\label{eq:polemoments}
+\end{align}
+For the last identity, shift the summation index by $2a$ and use $\chi(m+2a)=(-1)^a\chi(m)$.
+
+For $K\ge1$, define
+\begin{equation}\label{eq:D}
+ D_K(x)=\prod_{a=1}^K(1-p^{-2a}x),\qquad r_a=p^{2a},\qquad
+ F_K(x)=\prod_{a=1}^K(x-r_a).
+\end{equation}
+Thus $D_K=(-1)^Kp^{-K(K+1)}F_K$. Polynomial division and simple partial fractions uniquely express every rational function with denominator dividing $D_K$ in terms of polynomial moments and the poles in~\eqref{eq:polemoments}. Define $\Lcal_X$ by keeping the rational moments~\eqref{eq:moments} and replacing $\xi_p$ by an indeterminate $X$ in~\eqref{eq:polemoments}. Then
+\begin{equation}\label{eq:Delta}
+ \Delta_K(X)=\det\left[\Lcal_X\left(\frac{x^{i+j}}{D_K(x)}\right)\right]_{0\le i,j<K}
+ \in\Q[X].
+\end{equation}
+At $X=\xi_p$, this is the determinant of the actual functional. Each entry is affine in $X$; an exact leading coefficient ensures that the determinant polynomial is nonzero.
+
+\begin{proposition}\label{prop:degree}
+For every $K\ge1$, $\Delta_K$ has degree $K$, and
+\begin{equation}\label{eq:leading}
+ [X^K]\Delta_K(X)=(-1)^Kp^{K(K^2-1)}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The coefficient of $(1-x/r_a)^{-1}$ in the partial fraction expansion of $x^k/D_K$ is
+$r_a^k/\prod_{b\ne a}(1-r_a/r_b)$. Hence the coefficient-of-$X$ matrix is $V\operatorname{diag}(w_a)V^{\mathsf T}$, where
+\begin{equation*}
+ V_{ia}=r_a^i\quad(0\le i<K),\qquad
+ w_a=\frac{(-1)^a}{\prod_{b\ne a}(1-r_a/r_b)}.
+\end{equation*}
+Its determinant is the squared Vandermonde times $\prod_a w_a$. For every pair $a<b$,
+\begin{equation*}
+ (1-r_a/r_b)(1-r_b/r_a)=-\frac{(r_a-r_b)^2}{r_ar_b}.
+\end{equation*}
+Cancelling the squared differences leaves sign
+$(-1)^{K(K+1)/2+K(K-1)/2}=(-1)^K$ and power
+$(\prod_a r_a)^{K-1}=p^{K(K^2-1)}$.
+\end{proof}
+
+\section{Content at primes dividing the base}
+The denominators away from $p$ will be cleared separately. At primes dividing $p$, the determinant already has a large common factor in all of its coefficients. A local translation of $X$ makes this factor visible; it is essential to retain the polynomial quotient as well as the proper fractions.
+
+For $t\in\mathbb R$, write $t_+=\max(t,0)$, and put
+\begin{align}\label{eq:cK}
+ c_K&=K^2(K+1)-\sum_{i=0}^{K-1}(K-2i)_+\bigl((K-2i)_++1\bigr)\notag\\
+ &=\frac{10K^3+3K^2-10K-3(K\bmod2)}{12}
+ =\frac56K^3+O(K^2).
+\end{align}
+\begin{proposition}\label{prop:content}
+For every prime $\ell\mid p$, every coefficient of $p^{-c_K}\Delta_K(X)$ is $\ell$-adically integral. This holds for composite as well as prime bases $p$.
+\end{proposition}
+\begin{proof}
+Fix $\ell\mid p$ and write $e=v_\ell(p)$. All series in this proof are taken in $\Q_\ell$. The identity $g_2(y^{-1})=g_2(y)$ and the character shift give
+\begin{equation}\label{eq:localseries}
+ Z=\sum_{b\ge1}\chi(b)g_2(p^b),\qquad
+ H(t)=\sum_{j\ge1}\mu_jt^j,\qquad
+ S_{2a}=Z-(-1)^aH(r_a).
+\end{equation}
+Here $Z$ is integral, $v_\ell(\mu_j)\ge ej$, and $H(0)=0$. For example, expanding $g_2(p^bt)$ first gives $H(t)=\sum_{b\ge1}\chi(b)g_2(p^bt)$, which proves the last identity by subtraction of the tail. These expansions converge at every $r_a$.
+
+Let $U=X-Z$ and $M_k=\Lcal_X(x^k/F_K)$. Partial fractions yield
+\begin{equation}\label{eq:Mlocal}
+ M_k=-U\sum_{a=1}^K\frac{(-1)^ar_a^{k-1}}{F_K'(r_a)}+R_k,
+\end{equation}
+where $R_k$ is integral. To check the entire remainder, let $h_t$ denote the complete homogeneous symmetric polynomial of degree $t$ in $r_1,\ldots,r_K$, with $h_0=1$ and $h_t=0$ for $t<0$. The divided-difference identity
+\begin{equation*}
+ \sum_{a=1}^K\frac{r_a^t}{F_K'(r_a)}=h_{t-K+1}\quad(t\ge0)
+\end{equation*}
+and monic polynomial division give explicitly
+\begin{equation}\label{eq:Rlocal}
+ R_k=-\sum_{j\ge1}\mu_jh_{k+j-K}
+       +\sum_{j=1}^{k-K}\mu_jh_{k-K-j}.
+\end{equation}
+The second sum is empty when its upper endpoint is less than $1$. Every nonzero summand in the first has valuation at least $ej+2e(k+j-K)$, tending to infinity; the finite second sum is integral too. This proves the assertion about $R_k$, including $k=0$.
+
+Since $v_\ell(r_a-r_b)=2e\min(a,b)$ for $a\ne b$,
+\begin{equation*}
+ e^{-1}v_\ell\left(\frac{r_a^{k-1}}{F_K'(r_a)}\right)
+ =a^2+(2k-2K-1)a.
+\end{equation*}
+Minimizing over $1\le a\le K$ gives the coefficientwise bound
+\begin{equation}\label{eq:entryvaluation}
+ v_\ell(M_k)\ge-e\,w_K(k),\qquad
+ w_K(k)=(K-k)_+\bigl((K-k)_++1\bigr).
+\end{equation}
+For $k<K$, the minimum is $-(K-k)(K-k+1)$; for $k\ge K$, all terms have nonnegative valuation. Translation from $U$ to $X$ preserves the estimate because $Z$ is integral.
+
+The sequence $h(k)=-w_K(k)$ is concave. For $i<j$ and $a<b$, concavity gives
+$h(i+a)+h(j+b)\le h(i+b)+h(j+a)$. Removing inversions from any permutation $\sigma$ therefore proves
+\begin{equation*}
+ \sum_{i=0}^{K-1}h(i+\sigma(i))\ge\sum_{i=0}^{K-1}h(2i).
+\end{equation*}
+Apply~\eqref{eq:entryvaluation} to each determinant term and restore the factor
+$\Delta_K=(-1)^{K^2}p^{K^2(K+1)}\det[M_{i+j}]$. This gives the first expression in~\eqref{eq:cK} as a coefficientwise lower bound divided by $e$. Summing the elementary quadratic progression gives the second expression. The argument used the actual multiplicity $e$ of each prime divisor and imposed no primality condition on $p$.
+\end{proof}
+
+\section{Cyclotomic denominators}
+To bound denominators away from the base, replace $p$ by an indeterminate $z$ in the rational formulas. Poles occur only at $z=0$ or at roots of unity. When the nodes $z^{2a}$ collide, an adapted polynomial basis keeps the determinant cost below the cost of clearing each entry independently. At orders divisible by four, a double zero in the residue data gives the crucial further saving.
+
+Let $\Phi_d$ be the $d$th cyclotomic polynomial and define $f(0)=0$ and $f(m)=\lfloor(m+2)^2/4\rfloor$ for $m\ge1$. Set
+\begin{equation}\label{eq:E}
+ E(K,d)=
+ \begin{cases}
+ t f(r+1)+(d-t)f(r),&d\le K\text{ odd},\ K=rd+t,\ 0\le t<d,\\
+ 2\bigl(K-\lfloor(d-1)/2\rfloor\bigr),&K<d\le2K\text{ odd},\\
+ 0,&d>2K\text{ odd},\\
+ \displaystyle\sum_{a\ge1,\ a\text{ odd}}(K-ah)_+,&d=2h,\ h\text{ odd},\\
+ \min\{K,(K-4u)_++(K-u-1)_+\},&d=4u.
+ \end{cases}
+\end{equation}
+All sums are finite, and every exponent is a nonnegative integer. Define
+\begin{equation}\label{eq:C}
+ C_K(z)=\prod_{d=1}^{4K}\Phi_d(z)^{E(K,d)}.
+\end{equation}
+\begin{proposition}\label{prop:clearer}
+For the polynomial $\Delta_K(X)$ with $p$ replaced by $z$,
+\begin{equation}\label{eq:Laurent}
+ C_K(z)\Delta_K(X)\in\Z[z,z^{-1}][X].
+\end{equation}
+\end{proposition}
+\begin{proof}
+We first establish local pole-order bounds and then pass to integer coefficients. Fix a primitive $d$th root $\omega$ and use $\tau=\log(z/\omega)$ as a uniformizer. Computations can be made over $\C((\tau))$, treating $X$ as transcendental over the residue field. A pole-order bound for the resulting polynomial in $X$ bounds every coefficient.
+
+\paragraph{The local basis.}
+The nodes $z^{2a}$ collide in index classes of spacing $h=d/\gcd(d,2)$. For a class $I$ of size $m$ and center $\rho$, let
+\begin{equation*}
+ F_I(x)=\prod_{a\in I}(x-z^{2a}),\qquad
+ G_{I,j}(x)=\frac{F_K(x)}{F_I(x)}(x-\rho)^j\quad(0\le j<m).
+\end{equation*}
+These $K$ polynomials form a basis over the local ring. Modulo $\tau$, this is the Chinese remainder decomposition at distinct centers, and $F_K/F_I$ is a unit at its own center. Thus the basis determinant is a unit, so the pole order of the moment determinant is unchanged. The scalar relating $F_K$ to $D_K$ is also a local unit.
+
+Products from different classes are divisible by $F_K$, so their proper-fraction pairing is zero. Within a class, the node evaluation of $G_{I,j}$ has order at least $j$, and $F_K'(z^{2a})$ has order $m-1$. Polynomial division by $F_K$ has integral local coefficients. Its moments are regular unless $d=4u$; in that case their poles are simple, and the first singular moment has index $u$.
+
+\paragraph{Odd orders at most $K$.}
+The finite tails $S_{2a}$ have poles of order at most two. Thus an entry in a size-$m$ class, in basis indices $j,k$, has valuation at least $j+k-m-1$. Scale row and column $j$ by $\tau^{w_j}$ with
+$w_j=\max(0,(m+1)/2-j)$. These nonnegative weights clear the proper part and preserve the regular polynomial part. Half-integer weights may be interpreted after adjoining $\tau^{1/2}$; the total determinant cost is the integer
+\begin{equation*}
+ 2\sum_{j=0}^{m-1}w_j
+ =\sum_{j=0}^{m-1}\max(0,m+1-2j)=f(m).
+\end{equation*}
+There are $t$ classes of size $r+1$ and $d-t$ of size $r$ when $K=rd+t$. This proves the first line of~\eqref{eq:E}.
+
+\paragraph{Odd orders greater than $K$.}
+There are no collisions. The tail $S_{2a}$ is regular when $2a<d$, while each remaining tail has pole order at most two. There are $K-\lfloor(d-1)/2\rfloor$ possibly singular tails when $K<d\le2K$. For $d>2K$ all tails and moments are regular. These observations prove the second and third lines.
+
+\paragraph{Orders twice an odd integer.}
+Let $d=2h$ with $h$ odd. A possibly singular tail index would be even and hence have character value zero; all tails and moments are regular. The signs $(-1)^a$ can alternate within a class, so no additional interpolation cancellation is assumed. The raw proper-entry valuation is at least $j+k-m+1$. Weights $\max(0,(m-1)/2-j)$ give class cost $\lfloor m^2/4\rfloor$. The identity
+\begin{equation*}
+ \left\lfloor\frac{m^2}{4}\right\rfloor
+ =\sum_{a\ge1,\ a\text{ odd}}(m-a)_+
+\end{equation*}
+and the balanced class sizes show that the sum of class costs is
+$\sum_{a\ge1,\ a\text{ odd}}(K-ah)_+$. This proves the fourth line.
+
+\paragraph{Orders divisible by four: interpolation of the tails.}
+Let $d=4u$. The collision spacing is $2u$, so $\varepsilon=(-1)^a$ is constant in a class and its center satisfies $\rho^u=\varepsilon$. Although each finite tail is regular, its divided differences can develop poles. We show that multiplying by $\tau$ makes these differences integral and identify their residue.
+
+For $s\ge1$, put $g_s(y)=\sum_{j\ge1}j^{s-1}y^j$ initially for $|y|<1$, and then use its rational continuation. The coefficient of $\tau^r$ in $S_N(\omega e^\tau)$, for $N=2a$, is
+\begin{equation}\label{eq:periodsum}
+ P_r(N)=\frac{(-1)^r}{r!}\sum_{b\le N}\chi(b)b^r g_{r+2}(\omega^{-b}).
+\end{equation}
+The even indices are omitted, so all evaluated functions here are regular. The coefficient multiplying $b^r$ is periodic with period $d$. Summing separately over each residue class shows that, for $N$ in one fixed class modulo $d$, $P_r(N)$ is a polynomial in $N$ of degree at most $r+1$.
+
+At a node of the class, $x=\rho e^{N\tau}$. In $\tau\sum_{r\ge0}\tau^rP_r(N)$, substitute $N=\log(x/\rho)/\tau$. A monomial of degree $s\le r+1$ in $P_r$ contributes a multiple of
+$\tau^{r+1-s}(\log(x/\rho))^s$. Its lowest total degree in $(\tau,x-\rho)$ is $r+1$. Thus the result belongs to $\C[[\tau,x-\rho]]$: each coefficient receives only finitely many contributions. Evaluation at the class nodes is legitimate, since $x-\rho$ is divisible by $\tau$. This proves the claimed integral divided differences without assuming analytic convergence in two independent variables.
+
+To compute the residue, define
+\begin{equation*}
+ G_1(y)=\sum_{b=1}^d\chi(b)g_1(\omega^{-b}y),\qquad g_1(y)=\frac{y}{1-y}.
+\end{equation*}
+The finite Fourier transform of $\chi$ vanishes except at indices congruent to $u$ or $3u$ modulo $4u$, where its two values are nonzero and opposite. Hence, for some $\kappa\ne0$,
+\begin{equation}\label{eq:G1}
+ G_1(y)=\kappa u\frac{y^u}{1+y^{2u}}.
+\end{equation}
+The leading coefficient of the polynomial period sum in~\eqref{eq:periodsum} is its period mean divided by $r+1$. If $t=\log(x/\rho)$, summing these leading terms gives
+\begin{equation*}
+ \sum_{r\ge0}\frac{(-1)^rt^{r+1}}{d(r+1)!}
+       \sum_{b=1}^d\chi(b)g_{r+2}(\omega^{-b})
+ =\frac{G_1(1)-G_1(e^{-t})}{d}.
+\end{equation*}
+Therefore the residue interpolant for $\tau\varepsilon(X-S_N)$ is a fixed nonzero scalar times
+\begin{equation}\label{eq:doublezero}
+ H_I(x)=\frac{x^u}{1+x^{2u}}-\frac{\varepsilon}{2}
+ =-\frac{\varepsilon(x^u-\varepsilon)^2}{2(1+x^{2u})}.
+\end{equation}
+The denominator is a unit at $\rho$, and $x^u-\varepsilon$ has a simple zero there. The residue data therefore have a double zero.
+
+\paragraph{Orders divisible by four: the residue ranks.}
+A same-class proper-entry residue is a confluent divided difference of order $m-1$. Its numerator contains $H_I(x)(x-\rho)^{j+k}$ and local units, including the factor $1/x$ from partial fractions. By~\eqref{eq:doublezero}, the residue is zero if $j+k>m-3$. In particular the last two rows vanish, and its rank is at most $(m-2)_+$. There are $2u$ balanced classes; the total proper-residue rank is at most $(K-4u)_+$.
+
+For the polynomial part, every polynomial of degree at most $u$ is in the radical of its residue form on the space of polynomials of degree less than $K$. Indeed, multiplying it by any polynomial of degree less than $K$ and dividing by $D_K$ gives a quotient of degree at most $u-1$, below the first singular moment. The polynomial-residue rank is consequently at most $(K-u-1)_+$.
+
+The complete matrix has at most a simple pole, and its residue rank is at most the sum of these ranks. A $K\times K$ matrix with at most a simple pole and residue rank $R$ has determinant pole order at most $\min(K,R)$. To see this, reduce the residue by constant invertible row and column operations to rank normal form; in the determinant expansion, at most $R$ factors can contribute a negative power. This proves the last line of~\eqref{eq:E}.
+
+\paragraph{From local bounds to integer coefficients.}
+The original partial fractions and polynomial division use integer Laurent polynomials, differences of nodes, the tails with denominators $(z^b-1)^2$, and moments with denominators $1+z^{2j}$. Thus only powers of $z$ and monic cyclotomic polynomials occur as denominators. The possible cyclotomic orders are at most $4K$ (polynomial quotient degrees are at most $K-2$). There are no integer constant denominators.
+
+Write a common-denominator expression as
+$N(z,X)/(z^M\prod_d\Phi_d(z)^{a_d})$, with $N\in\Z[z,X]$. The local bounds just proved imply that the necessary powers of each $\Phi_d$ divide every coefficient of $N$ in $\Q[z]$. Monic division gives the same quotients in $\Z[z]$. Cancellation proves~\eqref{eq:Laurent}. The auxiliary formal Taylor expansions introduced no new denominators in these original rational expressions.
+\end{proof}
+
+\section{The arithmetic growth}
+The local exponents are sufficient only if their total cost leaves room for decay. Their cubic term can be computed from two elementary totient sums. Keeping the three congruence classes separate also makes the contribution of the double zero transparent.
+
+\begin{proposition}\label{prop:cost}
+For fixed $p\ge2$, as $K\to\infty$,
+\begin{equation}\label{eq:cost}
+ \log C_K(p)=(C+o(1))K^3\log p,\qquad
+ C=\frac16+\frac{1309}{150\pi^2}.
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:integerpoly}
+ P_K(X)=C_K(p)p^{-c_K}\Delta_K(X)\in\Z[X],\qquad \deg P_K=K.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Let $\varphi$ be Euler's totient function. We need
+\begin{equation}\label{eq:totient}
+ \sum_{\substack{d\le T\\d\text{ odd}}}\varphi(d)
+ =\frac{2}{\pi^2}T^2+o(T^2),\qquad
+ \sum_{u\le T}\varphi(4u)=\frac{8}{\pi^2}T^2+o(T^2).
+\end{equation}
+For completeness, writing $\mu_{\rm M}$ for the M\"obius function, the first sum equals
+\begin{equation*}
+ \sum_{\substack{r\le T\\r\text{ odd}}}\mu_{\rm M}(r)
+       \sum_{\substack{s\le T/r\\s\text{ odd}}}s
+ =\frac{T^2}{4}\sum_{r\text{ odd}}\frac{\mu_{\rm M}(r)}{r^2}
+   +O(T\log T).
+\end{equation*}
+The Euler product is $8/\pi^2$, giving the first formula. For the second, write $u=2^vs$ with $s$ odd and use $\varphi(4u)=2^{v+1}\varphi(s)$. Summing the first asymptotic at $T/2^v$ yields leading coefficient
+$(4/\pi^2)\sum_{v\ge0}2^{-v}=8/\pi^2$; the accumulated error is $O(T\log^2 T)$.
+
+The identity
+\begin{equation*}
+ f(m)=2m+\sum_{a\ge3,\ a\text{ odd}}(m-a)_+\quad(m\ge1)
+\end{equation*}
+rewrites the odd range $d\le K$ of~\eqref{eq:E} as
+$E(K,d)=2K+\sum_{a\ge3,\ a\text{ odd}}(K-ad)_+$.
+Partial summation in~\eqref{eq:totient} shows that each fixed odd $a$ contributes $2/(3\pi^2a^2)$ to the coefficient of $K^3$ in the weighted sum. The initial $2K$ contributes $4/\pi^2$. Since $\sum_{a\ge1,\ a\text{ odd}}a^{-2}=\pi^2/8$, this range contributes
+\begin{equation*}
+ \frac4{\pi^2}+\frac2{3\pi^2}\left(\frac{\pi^2}{8}-1\right)
+ =\frac1{12}+\frac{10}{3\pi^2}.
+\end{equation*}
+The outer odd range contributes
+$\frac4{\pi^2}\int_1^2 x(2-x)\,dx=8/(3\pi^2)$.
+For $d=2h$, $h$ odd, we have $\varphi(2h)=\varphi(h)$; the fourth line of~\eqref{eq:E} therefore contributes
+$\frac2{3\pi^2}\sum_{a\ge1,\ a\text{ odd}}a^{-2}=1/12$.
+The infinite sums can be truncated uniformly: $\varphi(d)\le d$ bounds the omitted terms by $O(K^3\sum_{a>A}a^{-2})$.
+
+For $d=4u$, put $x=u/K$. The limiting exponent $E(K,4u)/K$ is $1$ on $[0,1/5]$, $2-5x$ on $[1/5,1/4]$, and $1-x$ on $[1/4,1]$. Its contribution is
+\begin{align*}
+ \frac{16}{\pi^2}\left(
+ \int_0^{1/5}x\,dx+
+ \int_{1/5}^{1/4}x(2-5x)\,dx+
+ \int_{1/4}^{1}x(1-x)\,dx\right)
+ =\frac{409}{150\pi^2}.
+\end{align*}
+The $-1$ in $(K-u-1)_+$ changes only lower-order terms. Adding the four ranges gives
+\begin{equation*}
+ \sum_{d\le4K}E(K,d)\varphi(d)=(C+o(1))K^3.
+\end{equation*}
+Also $\sum_d E(K,d)=O(K^2\log K)$, by bounding the colliding ranges by harmonic sums of $O(K^2/d+K)$ and the remaining ranges by $O(K^2)$.
+
+The M\"obius product for $\Phi_d$ gives
+$\log\Phi_d(p)=\varphi(d)\log p+O_p(1)$ uniformly in $d$, because $\sum_{a\ge1}|\log(1-p^{-a})|<\infty$. This proves~\eqref{eq:cost}.
+At primes dividing $p$, Proposition~\ref{prop:content} proves the integrality in~\eqref{eq:integerpoly}; multiplication by the integer $C_K(p)$ preserves it. At every other prime, Proposition~\ref{prop:clearer} proves it, since $p$ is a unit. Rational numbers integral at every prime are integers. Finally, the normalization is nonzero and Proposition~\ref{prop:degree} gives the degree.
+\end{proof}
+
+\section{Cubic decay on the real side}
+Only odd lattice points occur in the functional. Placing each early odd point twice among the zeros of a monic basis annihilates both function values and derivatives there. The remaining evaluations are small enough to give cubic decay of the determinant.
+
+Define
+\begin{equation}\label{eq:basis}
+ B_j(x)=\prod_{t=1}^j\left(x-q^{2\lceil t/2\rceil-1}\right),\qquad
+ a_j=\left\lceil\frac{j^2}{2}\right\rceil,
+\end{equation}
+with $B_0=1$, and let $R_0=0$, $R_j=2\lceil j/2\rceil-1$ for $j\ge1$.
+\begin{proposition}\label{prop:decay}
+For all $K\ge1$,
+\begin{equation}\label{eq:decay}
+ |\Delta_K(\xi_p)|
+ \le\bigl[2(2K-1)\sqrt K\bigr]^K q^{b_K},\qquad
+ b_K=\frac{K(K-1)(2K-1)}6+\left\lfloor\frac K2\right\rfloor.
+\end{equation}
+In particular the logarithm is at most $-\frac13K^3\log p+O_p(K^2)$, with $\log0=-\infty$.
+\end{proposition}
+\begin{proof}
+Every odd node $q^m$ with $m<R_j$ is a double root of $B_j$. At every remaining odd node, direct product estimates give
+\begin{equation}\label{eq:Bbound}
+ |B_j(q^m)|\le q^{a_j},\qquad
+ |\theta B_j(q^m)|\le j q^{a_j}q^{m-R_j}.
+\end{equation}
+Indeed $|q^m-q^r|\le q^r$ when $r\le m$, and the sum of the root exponents in~\eqref{eq:basis} is $a_j$. Differentiating one factor replaces $q^r$ by $q^m$, losing at most $q^{m-R_j}$.
+
+Set $W_K=D_K^{-1}$. For $0\le x\le q\le1/2$,
+\begin{equation*}
+ \theta\log W_K(x)=\sum_{a=1}^K\frac{q^{2a}x}{1-q^{2a}x}
+ \le\frac{q^2x}{(1-q^2)(1-q^3)}\le\frac8{21}x.
+\end{equation*}
+Using $-\log(1-t)\le t/(1-t)$ similarly gives
+$W_K(x)\le e^{4/21}$ and $|\theta W_K(x)|\le(8/21)e^{4/21}x$.
+Let $R=\max(R_i,R_j)$. Every odd $m<R$ contributes zero to $\Lcal(B_iB_jW_K)$. At $m\ge R$, the product rule and~\eqref{eq:Bbound} bound the summand in absolute value by
+\begin{equation*}
+ e^{4/21}q^{a_i+a_j}(i+j+8/21)q^{m-R}.
+\end{equation*}
+This also holds for $i=j=0$, taking $R=0$. The sum over surviving odd $m$ is at most $1/(1-q^2)\le4/3$. Since $(4/3)e^{4/21}<2$, it follows that
+\begin{equation}\label{eq:matrixbound}
+ \left|\Lcal\left(\frac{B_iB_j}{D_K}\right)\right|
+ \le2(i+j+1)q^{a_i+a_j}.
+\end{equation}
+The monic triangular change from $1,x,\ldots,x^{K-1}$ to $B_0,\ldots,B_{K-1}$ has determinant one. Extracting $q^{a_i}$ from each row and column and applying Hadamard's inequality gives~\eqref{eq:decay}, because every remaining row has norm at most $2(2K-1)\sqrt K$. Finally,
+$2a_j=j^2+\mathbf1_{j\text{ odd}}$, so $2\sum_{j<K}a_j=b_K=K^3/3+O(K^2)$. No positivity or nonvanishing has been assumed.
+\end{proof}
+
+\section{Infinitely many nonzero determinants}
+Small integer-polynomial values give an irrationality contradiction only when they are nonzero. Our functional is signed and involves derivatives, so positivity is unavailable. Instead, singular determinants would produce rational interpolants at an increasing set of exterior points. If all sufficiently large determinants were singular, these interpolants would stabilize, which is incompatible with the poles of the functional's Cauchy transform.
+
+\begin{proposition}\label{prop:nonzero}
+For fixed $p\ge2$, $\Delta_K(\xi_p)\ne0$ for infinitely many integers $K$.
+\end{proposition}
+\begin{proof}
+Initially for $z\notin[0,q]$, let
+\begin{equation}\label{eq:transform}
+ \Fcal(z)=\Lcal((z-x)^{-1})
+ =\sum_{m\ge1}\frac{\chi(m)q^m}{(z-q^m)^2}.
+\end{equation}
+The displayed series continues $\Fcal$ to
+$\Omega=\C\setminus(\{0\}\cup\{q^{2s+1}:s\ge0\})$. It and its derivatives converge locally uniformly on $\Omega$, since their tails are bounded by a constant times $\sum_m q^m$ on each compact subset. Each odd support point is a genuine double pole: isolate its summand, whose leading coefficient is $\chi(m)q^m\ne0$. Hence $\Fcal$ is nonrational. Its germ at infinity is analytic and $O(z^{-2})$. The geometric expansion there can be applied under $\Lcal$ on every region $|z|\ge r>q$, by~\eqref{eq:continuity}.
+
+If the determinant of size $n$ is zero, a nonzero kernel vector supplies a polynomial $Q_n$ of degree at most $n-1$ satisfying
+\begin{equation}\label{eq:orthog}
+ \Lcal\left(\frac{x^jQ_n(x)}{D_n(x)}\right)=0\qquad(0\le j<n).
+\end{equation}
+There is no assumption that $Q_n$ has full degree. For a polynomial $Q$ of degree at most $n-1$, define
+\begin{align}\label{eq:interpolants}
+ R_{n,Q}(z)&=\Lcal\left(\frac{Q(x)}{(z-x)D_n(x)}\right),\notag\\
+ T_{n,Q}(z)&=\Lcal\left(
+ \frac{Q(z)D_n(x)-D_n(z)Q(x)}{(z-x)D_n(x)}\right).
+\end{align}
+The numerator in the second line vanishes at $z=x$ and has degree at most $n$ in $z$. Thus $T_{n,Q}$ is a polynomial of degree at most $n-1$. Direct algebra gives
+\begin{equation}\label{eq:error}
+ \Fcal(z)Q(z)-T_{n,Q}(z)=D_n(z)R_{n,Q}(z).
+\end{equation}
+The convergence assertions for $\Fcal$ also apply to each fixed $R_{n,Q}$.
+
+Take $Q=Q_n$, and write $T_n=T_{n,Q_n}$. Equation~\eqref{eq:orthog} and the expansion at infinity show that $R_{n,Q_n}(z)=O(z^{-n-1})$. Therefore
+\begin{equation}\label{eq:En}
+ E_n(z)=\Fcal(z)Q_n(z)-T_n(z)=O(z^{-1}),\qquad
+ E_n(p^{2a})=0\quad(1\le a\le n).
+\end{equation}
+The exterior zeros follow from~\eqref{eq:error}; $R_{n,Q_n}$ is analytic there. They remain valid when $Q_n$ also vanishes at an exterior point.
+
+Suppose two consecutive sizes $n,n+1$ are singular. The polynomial
+\begin{equation*}
+ T_{n+1}Q_n-T_nQ_{n+1}
+ =Q_{n+1}E_n-Q_nE_{n+1}
+\end{equation*}
+is $O(z^{n-1})$ at infinity, by~\eqref{eq:En}; hence its degree is at most $n-1$. It vanishes at the $n$ distinct common points $p^{2a}$, $1\le a\le n$, so it is zero. This argument does not divide by $Q_n$ at any interpolation point.
+
+Now suppose all sizes $n\ge N$ are singular. The preceding identity makes all rational functions $T_n/Q_n$ equal to one reduced fraction $T/Q$. Thus $Q_n=U_nQ$ and $T_n=U_nT$ for nonzero polynomials $U_n$. This includes the zero fraction, for which we choose $T=0,Q=1$. Since $\Fcal$ is nonrational, the fixed function $E=\Fcal Q-T$ is nonzero. It is meromorphic at infinity, and $U_NE=O(z^{-1})$ implies that it has a zero there of some finite order $h\ge1$. Consequently $U_nE=O(z^{-1})$ forces $\deg U_n\le h-1$ for every $n\ge N$.
+
+For sufficiently large $|z|$, the function $E$ has no zeros, since its leading term is a nonzero multiple of $z^{-h}$. At each exterior point $p^{2a}$ beyond that fixed radius with $a\le n$, equation~\eqref{eq:En} forces $U_n(p^{2a})=0$. The number of such points tends to infinity, contradicting the uniform bound on $\deg U_n$. Eventual singularity is impossible.
+\end{proof}
+
+\section{The irrationality conclusion}
+All parameters are now fixed explicitly. The common content and the real decay together exceed the cyclotomic cost, while Proposition~\ref{prop:nonzero} ensures that the resulting small values are nonzero infinitely often.
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+By Proposition~\ref{prop:cost}, the polynomials $P_K$ in~\eqref{eq:integerpoly} have integer coefficients and degree $K$. Equations~\eqref{eq:cK}, \eqref{eq:cost}, and~\eqref{eq:decay} imply
+\begin{equation}\label{eq:finalbound}
+ \log|P_K(\xi_p)|\le(-\delta+o(1))K^3\log p,\qquad
+ \delta=1-\frac{1309}{150\pi^2}>\frac{41}{1350}>0.
+\end{equation}
+The strict inequality uses only $\pi^2>9$. Infinitely many of these values are nonzero by Proposition~\ref{prop:nonzero}.
+
+If $\xi_p=a/b$ with integers $a,b$ and $b\ge1$, then $b^KP_K(a/b)$ is an integer. Along the infinite nonzero subsequence it is a nonzero integer, but
+\begin{equation*}
+ \log|b^KP_K(a/b)|\le K\log b+(-\delta+o(1))K^3\log p\longrightarrow-\infty.
+\end{equation*}
+This contradicts its absolute value being at least one, and proves irrationality.
+\end{proof}
+
+\section{Verification, provenance, and scope}
+The proof uses exact all-index estimates. The accompanying computations check signs, finite coefficient integrality, and selected numerical enclosures; they do not replace any infinite argument. Their scripts and machine-readable results are included with the manuscript.
+
+The conservative normalization in~\eqref{eq:integerpoly} was replayed for $p\in\{2,3,4,5,6\}$ and $1\le K\le20$, giving $100$ exact cases. A separate implementation using Python's rational arithmetic reconstructed the determinant by evaluation and interpolation for $p\in\{2,3,4,6\}$ and $1\le K\le10$, checking the leading coefficient and prime-by-prime content in $40$ cases. Direct summation of the derivative functional, with explicit tail bounds, agreed with $144$ affine-moment entries. Twelve primitive-polynomial enclosures excluded zero; three rational evaluations per polynomial also agreed with direct determinants.
+
+A further replay at $p=2$, $K=48$ used a primitive integer normalization, which can be smaller than the safe normalization~\eqref{eq:integerpoly}. At $155{,}413$ bits of working precision, an exact divisor-sum partial sum of $155{,}605$ terms and an explicit tail enclosure gave
+\begin{equation*}
+ P^{\rm prim}_{48}(\xi_2)
+ =2.31706456337800408658\ldots\times10^{-8478},
+\end{equation*}
+with an interval excluding zero. The complete interval, coefficient fingerprint, and tail bound are recorded in the certificate. This is one finite witness; the infinite nonvanishing assertion is Proposition~\ref{prop:nonzero}.
+
+\paragraph{Research status and attribution.}
+This is an AI-assisted research draft, prepared from the Open Problems research ledger at commit \texttt{b19558937c91}, with separate fresh internal reviews of the analytic and arithmetic arguments. The source files, exact content hashes, review scopes, and editorial changes are recorded in the repository. The project designation is retained as authorship metadata; no individual human authorship or contribution is inferred. The mathematical claim is a written proof with internal review, not external peer review or a completed Lean formalization. No complete Lean proof of this theorem is included. Literature comparison establishes relevant antecedents, not a certified priority claim.
+
+The main theorem concerns this precise Lambert-series normalization and positive reciprocal integers. It does not establish the corresponding assertion for arbitrary rational $q$, transcendence of $\beta_{1/p}(2)$, irrationality of all even beta values, or an effective irrationality measure. The relationship to classical Catalan's constant in the introduction is a comparison of targets, not an input to the proof.
+
+The preserved companion notes contain a stronger cyclotomic saving and a mixed-functional argument for the rational linear independence of $1,\beta_{1/p}(1),\beta_{1/p}(2)$. Those results are inventoried separately for subsequent exposition; neither is needed for this paper. The status of a note, a finite check, an internal review, and a formal theorem is kept distinct in that inventory.
+
+\input{references}
+\end{document}

@@ -1,0 +1,223 @@
+{
+  "repository": "fikreab-s/the-math-research-ledger",
+  "ref": "b19558937c91876d6330c8464871e146a820c909",
+  "retrieval": "GitHub connector fetch_file at explicit commit; stored blobs verified locally",
+  "files": [
+    {
+      "local_path": "provenance/research/qbeta-mixture/MIXTURE_EXTENSION.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta-mixture/MIXTURE_EXTENSION.md",
+      "git_blob_sha1": "bcf79b9d4b5a606c421ad681a8115edda7820e6f",
+      "sha256": "b5ce27861da4ec45413f276b999c3ad593d0fc19b9d2930290a4b88d6ce35e1f",
+      "size_bytes": 11812
+    },
+    {
+      "local_path": "provenance/research/qbeta-mixture/check.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta-mixture/check.py",
+      "git_blob_sha1": "f8c9a59c350eeacf83d44d27abe3035e3893328e",
+      "sha256": "6fce8833cebaf76ebd7d9d1e2780f887eca64ba2682b74357dbd531c70f554e4",
+      "size_bytes": 3351
+    },
+    {
+      "local_path": "provenance/research/qbeta-mixture/checks.json",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta-mixture/checks.json",
+      "git_blob_sha1": "8a306998561ff9c4bc725183290b4fab3bbe8bc9",
+      "sha256": "27cfe92a3d53e7cdfc83cc1b3c81cb778d283f5bcab49edb26e1d93e25b4f8a2",
+      "size_bytes": 19264
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/MIXTURE_FINAL_AUDIT.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/MIXTURE_FINAL_AUDIT.md",
+      "git_blob_sha1": "df0d3168ef931999da4523c12afc0954c6663b49",
+      "sha256": "eb5ac500dafe6711507ccf3b6ff2f512fc91c93f7088352d8bb7e877dd27feff",
+      "size_bytes": 5586
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/STEP2_ANALYTIC_NORMALITY.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/STEP2_ANALYTIC_NORMALITY.md",
+      "git_blob_sha1": "ff72773f934ae5a340399cfbe1e5ef827161a26a",
+      "sha256": "54e5bf91f04ad8f21de5dc1bbc640510eb1b4260343e2ba33b620d35b7bb16b6",
+      "size_bytes": 7472
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/STEP4_CYCLOTOMIC_AUDIT.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/STEP4_CYCLOTOMIC_AUDIT.md",
+      "git_blob_sha1": "963862214403486a5a2a1860cf4374f8ebffd7cd",
+      "sha256": "f4de18c62028ae06ffe23d4eae029aa2581bb2c29159a2b90ee5ff35707c87c8",
+      "size_bytes": 3950
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/check.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/check.py",
+      "git_blob_sha1": "e9ac7a153413f506b624fb4519ca9604f61a5c07",
+      "sha256": "73cc45edb7e8a11d97ecdcf25bfe50dd418078744d826500278073b06150f459",
+      "size_bytes": 3480
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/checks.json",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/checks.json",
+      "git_blob_sha1": "054745d37775b4b2dda5650e1dd685a959ffc920",
+      "sha256": "5818470d7fd91a23abd488b3c2718b86d139dc834862c117c43ed2b8b8f234c0",
+      "size_bytes": 4971
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/mixed_check.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/mixed_check.py",
+      "git_blob_sha1": "05f4ec9ae77840af881646f7eb656391fdc8838b",
+      "sha256": "b4045e5b569a0e599737bfca3feef3830844218f0802f0c491e0cf0c6ab1f1ea",
+      "size_bytes": 2095
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/mixed_checks.json",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/mixed_checks.json",
+      "git_blob_sha1": "f8cc280ad3a255b7f3f78e604554894fe9293037",
+      "sha256": "fff0732970162310ae02b375c9bd99c15894edc0eb7a06a0d00da4f326226f42",
+      "size_bytes": 3874
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/source/mixed_exact.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/source/mixed_exact.py",
+      "git_blob_sha1": "7c912a3b24e965364635bc058640dd4a71c626e6",
+      "sha256": "d7166da5b7da6ac6ad59806ee5a1d3c35230466cac039b8c789563c4e663f352",
+      "size_bytes": 2304
+    },
+    {
+      "local_path": "provenance/research/qbeta2-audit/source/step2.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-audit/source/step2.py",
+      "git_blob_sha1": "7aaec35e6ab405033c0abc6be180e790dba65cf2",
+      "sha256": "cf2eb50aa7155baafff129f2ed9840c6cb4d60331c3d2bd068f2ddebb3c6291a",
+      "size_bytes": 859
+    },
+    {
+      "local_path": "provenance/research/qbeta2-step2-content/CONTENT_PROOF.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-step2-content/CONTENT_PROOF.md",
+      "git_blob_sha1": "3d776b53798381f7186a84839ec6146ff6d70164",
+      "sha256": "3814ed5bd45f007c364fbab602a8754afe748882a8376fa1c46243f933f61596",
+      "size_bytes": 5259
+    },
+    {
+      "local_path": "provenance/research/qbeta2-step2-content/check.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-step2-content/check.py",
+      "git_blob_sha1": "b6025e0d6a60a2aa1cd147f4875c4d003f90d398",
+      "sha256": "6855cf435d51015753b919a08e6ec467237e115c13f264fbb2836c17babfa4f4",
+      "size_bytes": 3179
+    },
+    {
+      "local_path": "provenance/research/qbeta2-step2-content/checks.json",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-step2-content/checks.json",
+      "git_blob_sha1": "6a479ac47d2ab20635e9ff68bb8a2bb97ad0db20",
+      "sha256": "72a424f0a9fa05208916af76b745b0bc288a6786b68265979441f1c21b2f15ef",
+      "size_bytes": 11613
+    },
+    {
+      "local_path": "provenance/research/qbeta2-step2-cost/REPORT.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-step2-cost/REPORT.md",
+      "git_blob_sha1": "4e82750bb417b73d01ed0f83a64248dad1b42486",
+      "sha256": "d601e2561ad5c80daf40e4d20781900ec07edbd7285f97829ef17c7cc4f74eb0",
+      "size_bytes": 9771
+    },
+    {
+      "local_path": "provenance/research/qbeta2-step2-cost/check.json",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-step2-cost/check.json",
+      "git_blob_sha1": "5fbc62a1193ed0747d621f3d8fc8d85e5db7aa73",
+      "sha256": "3f5616fad11b8f90ee7843098c0e78c7aa34f977acd91012b9a27529b0f78b4b",
+      "size_bytes": 81067
+    },
+    {
+      "local_path": "provenance/research/qbeta2-step2-cost/check.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2-step2-cost/check.py",
+      "git_blob_sha1": "19eb064d2135bb093e3d23ac8beb64d4a1724ee0",
+      "sha256": "e080183e0f24152bf69b954df18c9825d47e2e1e3ec6bb0cc8b92e6af8906096",
+      "size_bytes": 1363
+    },
+    {
+      "local_path": "provenance/research/qbeta2/PROOF_CANDIDATE.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/PROOF_CANDIDATE.md",
+      "git_blob_sha1": "8f944b8d7555814a0ab7dabc4edec25a7ea581fe",
+      "sha256": "36450caaf25991a5bda13e681d84272c3f9a023a3abafc23ad0be84ed40c7539",
+      "size_bytes": 18893
+    },
+    {
+      "local_path": "provenance/research/qbeta2/REPORT.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/REPORT.md",
+      "git_blob_sha1": "16b90910e7560aeddc160f9c64b15bbb50d4bf90",
+      "sha256": "0630fb4f4c1152f6160a860977b73077227a57a01ca1a66bb1f3c3b6318a3aa9",
+      "size_bytes": 8384
+    },
+    {
+      "local_path": "provenance/research/qbeta2/STEP2_DISCOVERY.md",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/STEP2_DISCOVERY.md",
+      "git_blob_sha1": "d926d7c589ac0206c30cfe2f6d871d63a6e0efde",
+      "sha256": "e842b436bc736a4586cc090f073efece96a8fbb2a8bfabb34ada79fd9d763243",
+      "size_bytes": 3940
+    },
+    {
+      "local_path": "provenance/research/qbeta2/check.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/check.py",
+      "git_blob_sha1": "36098b9ee4073c00412f24c57994c18e20eeb572",
+      "sha256": "2e74134129de002149a24f1a700c62c978d95830fda345c9adaf8fcd4abe102f",
+      "size_bytes": 907
+    },
+    {
+      "local_path": "provenance/research/qbeta2/checks.json",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/checks.json",
+      "git_blob_sha1": "dbf219ef056fa4ddfd69330434987875ff0207ac",
+      "sha256": "72a1b6b13e023af4a07f6fccec5f12a3f2a53bda02bea2f38cbf645fa5d24a54",
+      "size_bytes": 10345
+    },
+    {
+      "local_path": "provenance/research/qbeta2/costs.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/costs.py",
+      "git_blob_sha1": "2f6feeb190cac20c6fda5485307c54cdbb702dd8",
+      "sha256": "823c97339acbfe09ffa566001abeb949ab055ac1c6770e79161c0498ee2d864e",
+      "size_bytes": 948
+    },
+    {
+      "local_path": "provenance/research/qbeta2/scan.jsonl",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/scan.jsonl",
+      "git_blob_sha1": "4531a0eb6f5613734af0252ecb42d042f94ea1e2",
+      "sha256": "4c281ce793ada45e92526beabde282c5643ab4f06ed82d19fd12000be93c00a1",
+      "size_bytes": 3041
+    },
+    {
+      "local_path": "provenance/research/qbeta2/scan.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/scan.py",
+      "git_blob_sha1": "9d6bf8b11b1f843247c307e0b6bbd0b7071f4ec7",
+      "sha256": "625c09eb8e833b758299cc347b22395b01333e381b98f00f0aaaada5e74d8727",
+      "size_bytes": 2379
+    },
+    {
+      "local_path": "provenance/research/qbeta2/step2.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/step2.py",
+      "git_blob_sha1": "14a7a7357c06148ea519c5f74f8deec36c1c5552",
+      "sha256": "6746e192ed795cb3f92a942a09ce5b93bbbd1672453fe1e3dcad51ffe8e4340a",
+      "size_bytes": 895
+    },
+    {
+      "local_path": "provenance/research/qbeta2/step2_scan.jsonl",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/step2_scan.jsonl",
+      "git_blob_sha1": "72cd3ccd096d29efb7d516e05799d773ad8f689e",
+      "sha256": "9b64997ff7e100ace3abeb5f387f4da5230594a3b1449812134bbdef8d2c4f3c",
+      "size_bytes": 3167
+    },
+    {
+      "local_path": "provenance/research/qbeta2/step2_scan.py",
+      "source_path": "problems/odd-zeta/computations/alternatives_20261011/qbeta2/step2_scan.py",
+      "git_blob_sha1": "ee7296a6c54d5ecb58ded94fc154d976256285b7",
+      "sha256": "9fc41573773ac60eabcc14a5c8d742b5cfd0e5ad443fa02dcdd6c675e08fea6b",
+      "size_bytes": 1195
+    }
+  ],
+  "all_git_blobs_verified": true,
+  "auxiliary_files": [
+    {
+      "local_path": "provenance/research/PARENT_REVIEW.md",
+      "sha256": "4079bff38f5b9b4050484c744d094166db347734cd4aa4e6896d93838dc0bb26",
+      "source": "Earlier session export; not part of the byte-verified 29-file GitHub snapshot"
+    },
+    {
+      "local_path": "reviews/previous-inventory-review.md",
+      "sha256": "f5274fc6fc6b15b471142216dab4b89fe037e8b52bc64c24c2d894abecf5de76",
+      "source": "Earlier session export; not part of the byte-verified 29-file GitHub snapshot"
+    }
+  ]
+}
