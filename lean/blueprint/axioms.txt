@@ -1,0 +1,23 @@
+QCatalan.irrational_xi {p : ℕ} (hp : 2 ≤ p) : Irrational (QCatalan.xi p)
+QCatalan.irrational_qCatalan (p : ℕ) (hp : 2 ≤ p) :
+  Irrational (∑' (n : ℕ), ↑(n + 1) * ↑p ^ (n + 1) / (↑p ^ (2 * (n + 1)) + 1))
+QCatalan.irrational_qBeta_two (p : ℕ) (hp : 2 ≤ p) :
+  Irrational (∑' (n : ℕ), ↑(n + 1) * (↑p)⁻¹ ^ (n + 1) / (1 + (↑p)⁻¹ ^ (2 * (n + 1))))
+'QCatalan.irrational_xi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.irrational_qCatalan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.irrational_qBeta_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.hasSum_xi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.hasSum_simplePole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.leading_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.natDegree_Delta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.content_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.DeltaR_cubic_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.frequently_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.Generic.raw_cyclotomic_coeff_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.Generic.Delta_coeff_integerMonicFraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.rawPK_coeff_den' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.rawPK_frequently_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.log_rawCK_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.tendsto_pow_mul_rawEps_of_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+Source audit passed: 86 Lean files, no forbidden proof tokens.
+Kernel audit passed: 16 declarations; only propext, Classical.choice, and Quot.sound are permitted.

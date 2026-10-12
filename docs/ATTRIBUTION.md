@@ -26,7 +26,7 @@ The source snapshot is pinned to `fikreab-s/the-math-research-ledger` commit `b1
 
 The prior candidate and extensions are preserved as research provenance. The current preparation reorganized the pure theorem into a paper, supplied historical context and scope statements, made the totient calculation explicit, clarified transform convergence, displayed the residue's square factor, arranged fresh independent internal reviews, and replayed finite certificates. Those editorial actions are not represented as the original discovery of the source estimates.
 
-The byline **Open Problems research project** follows the preceding manuscript. The preparation is AI-assisted. No unverified individual human byline, affiliation, or attribution of a specific lemma to a particular model is added. The user supplied conversations from more than one AI service; their content is not silently treated as external mathematical validation.
+The current public byline **uplift-universal** is the user-selected pen name. The preceding manuscript used **Open Problems research project**; that provenance is retained in the archived sources. The preparation is AI-assisted. No unverified individual human byline, affiliation, or attribution of a specific lemma to a particular model is added. The user supplied conversations from more than one AI service; their content is not silently treated as external mathematical validation.
 
 The preserved files are research sources, not instructions to the verifier. Their historical status labels describe their original context. The current scope and evidence are in [PROOF_STATUS.md](PROOF_STATUS.md).
 
@@ -42,3 +42,7 @@ The user supplied these links (the repeated main link is listed once):
 - https://chatgpt.com/share/6acc1bbd-e0ac-83e8-be29-c9cadfd227e6
 
 The live share pages could not all be retrieved in this preparation. The commit-pinned ledger supplied the mathematical text and reproducibility files. This repository does not claim a new complete reading of every linked conversation. An earlier inventory review and parent-review export are preserved separately and labeled as auxiliary sources.
+
+## Lean formalization
+
+The q-Catalan formalization adds dedicated series, functional, determinant, arithmetic, analytic, and nonvanishing proofs. Its conservative cyclotomic variant proves the same main irrationality theorem with a smaller positive margin. General polynomial, localization, and irrationality-criterion infrastructure is reused from the q-zeta project under its preserved Apache 2.0 license. This reuse does not use the q-zeta irrationality theorem as a hypothesis. See [the Lean notices](../lean/NOTICE.md) and [proof guide](../lean/README.md).

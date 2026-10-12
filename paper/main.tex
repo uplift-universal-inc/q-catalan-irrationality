@@ -10,7 +10,7 @@
 \definecolor{paperlink}{RGB}{0,0,114}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linktoc=all,linkcolor=paperlink,citecolor=paperlink,urlcolor=paperlink,
-pdftitle={Irrationality of the q-Catalan value beta(1/p,2)},pdfauthor={Open Problems research project}}
+pdftitle={Irrationality of the q-Catalan value beta(1/p,2)},pdfauthor={uplift-universal}}
 \usepackage{fancyhdr}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\small Irrationality of the $q$-Catalan value $\beta_{1/p}(2)$}
@@ -27,7 +27,7 @@ pdftitle={Irrationality of the q-Catalan value beta(1/p,2)},pdfauthor={Open Prob
 \newcommand{\Lcal}{\mathcal L}\newcommand{\Fcal}{\mathcal F}
 \newcommand{\rank}{\operatorname{rank}}\newcommand{\ord}{\operatorname{ord}}
 \title{Irrationality of the $q$-Catalan value $\beta_{1/p}(2)$}
-\author{Open Problems research project}
+\author{uplift-universal}
 \date{}
 \begin{document}
 \maketitle
@@ -444,11 +444,145 @@ A further replay at $p=2$, $K=48$ used a primitive integer normalization, which 
 with an interval excluding zero. The complete interval, coefficient fingerprint, and tail bound are recorded in the certificate. This is one finite witness; the infinite nonvanishing assertion is Proposition~\ref{prop:nonzero}.
 
 \paragraph{Research status and attribution.}
-This is an AI-assisted research draft, prepared from the Open Problems research ledger at commit \texttt{b19558937c91}, with separate fresh internal reviews of the analytic and arithmetic arguments. The source files, exact content hashes, review scopes, and editorial changes are recorded in the repository. The project designation is retained as authorship metadata; no individual human authorship or contribution is inferred. The mathematical claim is a written proof with internal review, not external peer review or a completed Lean formalization. No complete Lean proof of this theorem is included. Literature comparison establishes relevant antecedents, not a certified priority claim.
+This is an AI-assisted research draft, prepared from the Open Problems research ledger at commit \texttt{b19558937c91}, with separate fresh internal reviews of the analytic and arithmetic arguments. The source files, exact content hashes, review scopes, and editorial changes are recorded in the repository. The public manuscript byline uses the pen name uplift-universal; the original Open Problems research-project attribution remains preserved in the provenance records. The written proof has internal review, without a claim of external peer review. A dedicated Lean development uses the conservative arithmetic variant described in Appendix~\ref{app:lean}; its complete project build and final theorem dependency audit have passed. Literature comparison establishes relevant antecedents, not a certified priority claim.
 
 The main theorem concerns this precise Lambert-series normalization and positive reciprocal integers. It does not establish the corresponding assertion for arbitrary rational $q$, transcendence of $\beta_{1/p}(2)$, irrationality of all even beta values, or an effective irrationality measure. The relationship to classical Catalan's constant in the introduction is a comparison of targets, not an input to the proof.
 
 The preserved companion notes contain a stronger cyclotomic saving and a mixed-functional argument for the rational linear independence of $1,\beta_{1/p}(1),\beta_{1/p}(2)$. Those results are inventoried separately for subsequent exposition; neither is needed for this paper. The status of a note, a finite check, an internal review, and a formal theorem is kept distinct in that inventory.
+
+\appendix
+\section{A conservative route for the Lean formalization}\label{app:lean}
+The Lean development uses the same target $\xi_p$, signed first-derivative
+functional, determinant $\Delta_K$, content exponent $c_K$, and analytic
+exponent $b_K$ as the main text. Its arithmetic normalization is slightly
+larger. This avoids the formal interpolation and double-zero residue argument
+at orders divisible by four; the sharper written argument in
+Propositions~\ref{prop:clearer} and~\ref{prop:cost} remains a separate result.
+
+Put
+\begin{equation*}
+ R(K,h)=\sum_{\substack{a\ge1\\a\text{ odd}}}(K-ah)_+.
+\end{equation*}
+Define $\widetilde E(K,d)=E(K,d)$ for odd $d$ and for $d\equiv2\pmod4$, but set
+\begin{equation}\label{eq:leanrawexponent}
+ \widetilde E(K,4u)=R(K,2u)+(K-u-1)_+\qquad(u\ge1).
+\end{equation}
+The corresponding multiplier and polynomial are
+\begin{equation*}
+ \widetilde C_K(z)=\prod_{d=1}^{4K}\Phi_d(z)^{\widetilde E(K,d)},
+ \qquad
+ \widetilde P_K(X)=p^{-c_K}\widetilde C_K(p)\Delta_K(X).
+\end{equation*}
+These objects are named \texttt{rawE}, \texttt{rawCK}, and \texttt{rawPK};
+they do not redefine the original \texttt{E}, \texttt{CK}, or \texttt{PK}.
+At primes dividing $p$, the implementation proves the same content bound
+directly from the finite signed tails and scaled residues, including the
+polynomial quotient. It uses midpoint convexity for the permutation bound;
+the local infinite-series translation is not needed for this implementation.
+
+For a cluster of size $m$, the direct proper-fraction bound uses the integer
+row and column weights
+\begin{equation*}
+ r_j=(\lfloor m/2\rfloor-j)_+,
+ \qquad c_j=(\lfloor(m-1)/2\rfloor-j)_+\quad(0\le j<m).
+\end{equation*}
+They satisfy $r_j+c_k+j+k\ge m-1$, and their total cost is
+$\sum_{j<m}(r_j+c_j)=\lfloor m^2/4\rfloor$.
+Summing over the balanced collision classes of spacing $h$ gives exactly
+$R(K,h)$. At order $4u$, adding the polynomial-quotient rank bound
+$(K-u-1)_+$ gives~\eqref{eq:leanrawexponent}. Thus the complete proper and
+polynomial parts are retained.
+
+\paragraph{Finite arithmetic cost.}
+The formal growth bound uses only the prime factors $3,5,7$, together with
+the parity classes. Define
+\begin{equation*}
+ w(n)=\prod_{\substack{\ell\in\{3,5,7\}\\\ell\mid n}}
+       \left(1-\frac1\ell\right),\qquad
+ w_o(n)=\mathbf1_{n\text{ odd}}w(n),\qquad w_4(n)=2w(n).
+\end{equation*}
+Euler's product gives $\varphi(n)\le n w_o(n)$ for odd $n$ and
+$\varphi(4n)\le n w_4(n)$. These weights have periods $210$ and $105$.
+Their finite zeroth, first, and second moments, followed by elementary
+bounds for the final incomplete block, give the required sums with explicit
+errors. For example,
+\begin{equation*}
+ \sum_{n<N}w_o(n)n=\frac{256}{1225}N^2+O(N),\qquad
+ \sum_{n<N}w_o(n)n^2=\frac{512}{3675}N^3+O(N^2).
+\end{equation*}
+The only reciprocal-square estimate needed is the finite inequality
+\begin{equation*}
+ \sum_{\substack{1\le a\le N\\a\text{ odd}}}\frac1{a^2}
+ \le\frac{89}{72}.
+\end{equation*}
+It follows by retaining $1+1/9$ and bounding the remaining terms with
+$1/(2j+1)^2\le(1/4)(1/j-1/(j+1))$ for $j\ge2$.
+No asymptotic evaluation of a totient sum or of $\zeta(2)$ is used here.
+
+The five contributions give the following cubic upper bound:
+\begin{align*}
+ C_{\mathrm{raw}}
+ &=\underbrace{\frac{43168}{99225}}_{\text{inner odd}}
+ +\underbrace{\frac{1024}{3675}}_{\text{outer odd}}
+ +\underbrace{\frac{256}{3675}\frac{89}{72}}_{\text{twice odd}}\\
+ &\quad+\underbrace{\frac{256}{3675}\frac{89}{72}}_{\text{fourfold proper}}
+ +\underbrace{\frac{1024}{3675}}_{\text{fourfold quotient}}
+ =\frac{115552}{99225}.
+\end{align*}
+Consequently the direct route has the sufficient bound
+\begin{equation*}
+ \log\widetilde C_K(p)
+ \le\left(\frac{115552}{99225}+o(1)\right)K^3\log p,
+ \qquad
+ \frac76-\frac{115552}{99225}=\frac{421}{198450}>0.
+\end{equation*}
+This is an upper bound for a different, conservative normalization, not an
+alternative evaluation of the constant in~\eqref{eq:cost}.
+
+\paragraph{Analytic and nonvanishing components.}
+The implementation allows the weaker real determinant estimate
+\begin{equation*}
+ |\Delta_K(\xi_p)|\le K!\,[6(2K-1)]^Kp^{-b_K}\qquad(K\ge1).
+\end{equation*}
+Its prefactor still has logarithm $O(K\log K)$. Exact finite identities give
+\begin{equation*}
+ 12(c_K+b_K)+3K^2+2K+9(K\bmod2)=14K^3.
+\end{equation*}
+The nonvanishing proof uses the actual signed Cauchy transform. Its double
+pole at $q^{2m+1}$ has leading coefficient $(-1)^m q^{2m+1}\ne0$.
+The implemented interpolation and polynomial root-count argument then
+rules out a tail of singular determinants, as in Proposition~\ref{prop:nonzero}.
+The final integer-polynomial contradiction is therefore the same one as in
+the main text, with remaining margin $421/198450$.
+
+\paragraph{Source-to-Lean correspondence.}
+All theorem names below lie in namespace \texttt{QCatalan}.
+The convergent target and simple-pole identity are \texttt{hasSum\_xi} and
+\texttt{hasSum\_simplePole}; the actual determinant identity is
+\texttt{gram\_det\_eq}. The degree and leading coefficient are
+\texttt{natDegree\_Delta} and \texttt{leading\_coeff}. The base-prime bound is
+\texttt{content\_coeff}, and the exact exponent identities are
+\texttt{cK\_exact}, \texttt{bK\_exact}, and \texttt{cK\_add\_bK\_exact}.
+The direct local arithmetic and finite growth estimates are in the
+\texttt{RawEvenCyclotomic}, \texttt{RawOddGrowth}, \texttt{RawClusterGrowth},
+and \texttt{RawGrowth} modules. Nonvanishing of the actual evaluated
+polynomial is \texttt{frequently\_ne\_zero}.
+A detailed mapping, build commands, and release status are recorded in
+\texttt{docs/PROOF\_STATUS.md} and \texttt{lean/README.md}.
+
+\paragraph{Formal verification status.}
+The complete Lean project builds with Lean and Mathlib v4.34.1.
+The declarations \texttt{QCatalan.irrational\_xi},
+\texttt{QCatalan.irrational\_qCatalan}, and
+\texttt{QCatalan.irrational\_qBeta\_two} prove the main theorem for every
+natural-number base $p\ge2$, including composite bases, with no further
+arithmetic, analytic, or nonvanishing hypotheses. The final transitive
+dependency audit reports only the standard axioms \texttt{propext},
+\texttt{Classical.choice}, and \texttt{Quot.sound}; no unproved placeholder
+or custom axiom is used. The audit also compiles the cases $p=4$ and $p=6$.
+This certifies the main irrationality assertion through the conservative
+normalization above; it does not certify the sharper cyclotomic bound in
+the original written argument.
 
 \input{references}
 \end{document}

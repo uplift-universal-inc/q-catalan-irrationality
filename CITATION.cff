@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite this repository when using the manuscript or formalization."
+type: software
+title: "Irrationality of the q-Catalan value beta_(1/p)(2): manuscript and Lean proof"
+authors:
+  - name: "uplift-universal"
+version: 0.1.0
+date-released: 2026-10-12
+repository-code: "https://github.com/uplift-universal-inc/q-catalan-irrationality"
+keywords:
+  - Lean
+  - q-Catalan
+  - irrationality
+  - formal verification

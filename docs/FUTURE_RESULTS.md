@@ -4,7 +4,7 @@ This inventory records the related results already present in the source snapsho
 
 | Result | Exact scope | Current evidence | Intended treatment |
 |---|---|---|---|
-| Pure q-Catalan irrationality | `β₁/ₚ(2)` for every integer p≥2 | Complete written candidate; fresh arithmetic, analytic, and final manuscript reviews; finite replays | Main paper in this repository |
+| Pure q-Catalan irrationality | `β₁/ₚ(2)` for every integer p≥2 | Complete Lean proof via the conservative cyclotomic variant; full build and final axiom audit passed; written sharper argument and finite replays retained | Main paper in this repository |
 | Improved pure cyclotomic cost | Replace `C=1/6+1309/(150π²)` by `C'=1/6+5281/(675π²)` | All-index source derivation with upper-node savings; historical 100-case exact check; fresh arithmetic review inspected the refinement, but the main paper uses the simpler bound | Optional technical refinement or appendix in a later version |
 | Mixed q-beta linear independence | `1, β₁/ₚ(1), β₁/ₚ(2)` are linearly independent over Q for each integer p≥2 | Complete companion proof candidate and original internal final audit; preserved historical finite checks; not freshly replayed or independently reviewed in full during this editorial pass | Separate focused paper with a new full review |
 | Weight-one transcendence | `β_q(1)` for algebraic q with 0<|q|<1 | Already discussed in Jouhet–Mosaki through theta functions and Nesterenko's theorem | Established background; not a new discovery to claim |

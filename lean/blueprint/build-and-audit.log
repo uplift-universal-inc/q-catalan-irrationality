@@ -1,0 +1,159 @@
+Source audit passed: 86 Lean files, no forbidden proof tokens.
+⚠ [3019/3224] Replayed QZeta3.ClusterBasis
+warning: QZeta3/ClusterBasis.lean:91:10: This simp argument is unused:
+  clusterFactor
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3023/3224] Replayed QZeta3.ClusterCounts
+warning: QZeta3/ClusterCounts.lean:152:47: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3025/3224] Replayed QZeta3.MovingProper
+warning: QZeta3/MovingProper.lean:12:0: automatically included section variable(s) unused in theorem `QZeta3.Generic.movingClusterPoly_eval_zero`:
+  [CharZero 𝕜]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero 𝕜] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QZeta3/MovingProper.lean:25:0: automatically included section variable(s) unused in theorem `QZeta3.Generic.movingClusterPoly_eval_div_mem`:
+  [CharZero 𝕜]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero 𝕜] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3041/3224] Replayed QCatalan.Cyclotomic
+warning: QCatalan/Cyclotomic.lean:113:40: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: QCatalan/Cyclotomic.lean:281:0: automatically included section variable(s) unused in theorem `QCatalan.primitive_fourfold_half_power`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QCatalan/Cyclotomic.lean:285:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QCatalan/Cyclotomic.lean:285:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QCatalan/Cyclotomic.lean:324:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.mu_mem_regularAt_of_den_ne_zero`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QCatalan/Cyclotomic.lean:367:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.S_mem_regularAt_even_order`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QCatalan/Cyclotomic.lean:572:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.Delta_scaled_coeff_mem_of_gram`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3042/3224] Replayed QCatalan.RawCyclotomicWeights
+warning: QCatalan/RawCyclotomicWeights.lean:33:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.derivative_F_eval_eq_prod`:
+  [CharZero 𝕜]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero 𝕜] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QCatalan/RawCyclotomicWeights.lean:142:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.movingClusterPoly_eval_div_mem`:
+  [CharZero 𝕜]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero 𝕜] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3047/3224] Replayed QCatalan.RawCyclotomicCost
+warning: QCatalan/RawCyclotomicCost.lean:130:6: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3048/3224] Replayed QCatalan.CyclotomicAuxOdd
+warning: QCatalan/CyclotomicAuxOdd.lean:105:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.primitive_square_odd`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QCatalan/CyclotomicAuxOdd.lean:108:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.Lpoly_mem_of_mu_mem`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: QCatalan/CyclotomicAuxOdd.lean:116:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.S_mem_regularAt_below_order`:
+  [CharZero k]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero k] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3052/3224] Replayed QZeta3.GenericSpecialization
+warning: QZeta3/GenericSpecialization.lean:118:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: QZeta3/GenericSpecialization.lean:119:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3056/3224] Replayed QCatalan.GenericEvaluation
+warning: QCatalan/GenericEvaluation.lean:18:0: automatically included section variable(s) unused in theorem `QCatalan.Generic.inv_plus_mem_regularAt`:
+  [CharZero 𝕜]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero 𝕜] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3064/3224] Replayed QCatalan.RawTotientSieve
+warning: QCatalan/RawTotientSieve.lean:55:37: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [3372/3453] Replayed QCatalan.RawRamp
+warning: QCatalan/RawRamp.lean:245:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QCatalan/RawRamp.lean:257:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3373/3453] Replayed QCatalan.RawClusterGrowth
+warning: QCatalan/RawClusterGrowth.lean:104:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3374/3453] Replayed QCatalan.RawGrowth
+warning: QCatalan/RawGrowth.lean:198:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: QCatalan/RawGrowth.lean:210:75: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3375/3453] Replayed QZeta3.Purity
+warning: QZeta3/Purity.lean:185:12: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Build completed successfully (3453 jobs).
+QCatalan.irrational_xi {p : ℕ} (hp : 2 ≤ p) : Irrational (QCatalan.xi p)
+QCatalan.irrational_qCatalan (p : ℕ) (hp : 2 ≤ p) :
+  Irrational (∑' (n : ℕ), ↑(n + 1) * ↑p ^ (n + 1) / (↑p ^ (2 * (n + 1)) + 1))
+QCatalan.irrational_qBeta_two (p : ℕ) (hp : 2 ≤ p) :
+  Irrational (∑' (n : ℕ), ↑(n + 1) * (↑p)⁻¹ ^ (n + 1) / (1 + (↑p)⁻¹ ^ (2 * (n + 1))))
+'QCatalan.irrational_xi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.irrational_qCatalan' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.irrational_qBeta_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.hasSum_xi' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.hasSum_simplePole' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.leading_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.natDegree_Delta' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.content_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.DeltaR_cubic_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.frequently_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.Generic.raw_cyclotomic_coeff_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.Generic.Delta_coeff_integerMonicFraction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.rawPK_coeff_den' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.rawPK_frequently_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.log_rawCK_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'QCatalan.tendsto_pow_mul_rawEps_of_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+Source audit passed: 86 Lean files, no forbidden proof tokens.
+Kernel audit passed: 16 declarations; only propext, Classical.choice, and Quot.sound are permitted.

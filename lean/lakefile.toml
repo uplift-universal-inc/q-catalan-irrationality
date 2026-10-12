@@ -1,0 +1,19 @@
+name = "QCatalan"
+version = "0.1.0"
+defaultTargets = ["QCatalan"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[lean_lib]]
+name = "QCatalan"
+
+[[lean_lib]]
+name = "QZeta3"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.34.1"

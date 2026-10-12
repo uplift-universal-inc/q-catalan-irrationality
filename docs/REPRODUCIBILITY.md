@@ -20,6 +20,10 @@ Each stored Arb interval includes a rigorous radius. The decimal `logabs` is a d
 
 `make paper` runs pdflatex twice in `paper/`. Source files are `main.tex`, `introduction.tex`, and `references.tex`. The included PDF was visually inspected on every page and the final build had no overfull boxes or unresolved references. PDF bytes can differ on rebuild because of timestamps.
 
-The GitHub workflow runs the finite checks and paper build after publication. It is included as configuration; no remote CI success is claimed before that workflow actually runs. It deliberately does not label its result as formal theorem verification.
+The GitHub workflow runs the finite checks and paper build after publication. It is included as configuration; no remote CI success is claimed before that workflow actually runs. A separate Lean workflow builds the pinned formal project and checks the final declarations’ axiom dependencies. Local verification of that project is documented in `lean/README.md`; this is separate from a remote workflow run.
 
 The original 29 source files remain unchanged. Some historical scripts use neighboring paths or represent the step-four precursor; they are archival evidence, not the recommended reproduction entry points.
+
+## Formal proof
+
+Run `cd lean`, `lake exe cache get`, `lake build`, and `bash scripts/audit.sh`. The toolchain is Lean v4.34.1 and the Mathlib revision is locked by `lake-manifest.json`. The audit checks the unconditional theorem for the explicit infinite series and permits only `propext`, `Classical.choice`, and `Quot.sound`. The proof does not depend on the finite Python certificates.
